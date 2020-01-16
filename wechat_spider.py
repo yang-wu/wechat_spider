@@ -170,7 +170,7 @@ def get_content(query):
             for item in fakeid_list:
                 title = item.get('title')
                 create_time = item.get('create_time')
-                source = "新钛云服"
+                source = "XXX"
                 digest = item.get("digest")
                 cover = item.get('cover')
                 content_link = item.get('link')
@@ -182,7 +182,7 @@ def get_content(query):
                     author_html = meta_content.find("span", class_="rich_media_meta rich_media_meta_text")
                     author = author_html.text.strip()
                 else:
-                    author = "新钛云服"
+                    author = "XXX"
                 js_content = soup.find(id="js_content")
                 img_list = js_content.find_all("img")
                 for img in img_list:
@@ -212,7 +212,7 @@ if __name__ == '__main__':
 
     # 登录微信公众号，获取登录之后的cookies信息，并保存到本地文本中
     wechat_login()
-    query = "newtyun"
+    query = "xxxxx"
     print("开始爬取公众号：" + query)
     get_content(query)
     print("爬取完成")
